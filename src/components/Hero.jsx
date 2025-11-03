@@ -1,9 +1,10 @@
 import Spline from '@splinetool/react-spline';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 export default function Hero() {
   return (
-    <section id="home" className="relative h-[92vh] min-h-[560px] w-full overflow-hidden bg-zinc-950">
+    <section className="relative h-[92vh] min-h-[560px] w-full overflow-hidden bg-zinc-950">
       <div className="absolute inset-0">
         <Spline
           scene="https://prod.spline.design/Gt5HUob8aGDxOUep/scene.splinecode"
@@ -45,18 +46,18 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="mt-8 flex flex-col sm:flex-row items-center gap-3"
         >
-          <a
-            href="#product"
+          <Link
+            to="/product"
             className="rounded-md bg-emerald-500 hover:bg-emerald-400 text-zinc-900 px-6 py-3 text-sm font-semibold shadow-lg shadow-emerald-500/20 transition-colors"
           >
             Explore Product
-          </a>
-          <a
-            href="#checkout"
+          </Link>
+          <Link
+            to="/checkout"
             className="rounded-md border border-zinc-700 bg-zinc-900/60 hover:bg-zinc-800 px-6 py-3 text-sm font-semibold text-white transition-colors"
           >
             Buy Now
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>
